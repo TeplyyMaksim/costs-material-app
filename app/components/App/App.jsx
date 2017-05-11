@@ -1,14 +1,38 @@
 import React from 'react';
-import topImg from './es6-webpack-react-babel.png';
-import './App.scss';
+/* Theme */
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
+import {
+  green300, cyan700
+} from 'material-ui/styles/colors';
+/* Elements */
+import FloatingActionButton from 'material-ui/FloatingActionButton';
+/* Events (use instead of onClick) */
+import injectTapEventPlugin from 'react-tap-event-plugin';
+injectTapEventPlugin();
 
-export default class App extends React.Component {
+const muiTheme = getMuiTheme({
+  palette: {
+    primary1Color: green300,
+  }
+});
+
+// Sources: http://www.material-ui.com/#/get-started/usage
+export default React.createClass({
+  handleClickTouch() {
+    console.log(muiTheme.palette.primary1Color);
+  },
+
   render() {
     return (
-      <div className="c-app">
-        <img src={topImg} />
-        <h1>Your application starts here</h1>
-      </div>
+      <MuiThemeProvider muiTheme={muiTheme}>
+        <div className="app">
+          <h1 className="header">Count your count$ with us</h1>
+          <FloatingActionButton label="Default" onTouchTap={this.handleClickTouch}>
+            <div>+</div>
+          </FloatingActionButton>
+        </div>
+      </MuiThemeProvider>
     );
   }
-}
+});

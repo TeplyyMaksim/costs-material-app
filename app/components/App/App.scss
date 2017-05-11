@@ -1,8 +1,13 @@
-.c-app {
+.app {
   text-align: center;
+  font-family: 'Roboto', sans-serif;
 
-  h1 {
-    font-size: 40px;
-    color: crimson;
+  .header {
+    height: 60px;
+    padding-bottom: 20px;
+    font-size: 45px;
+    border-top: 10px solid $primary-darker-color;
+    line-height: 60px;
+    background: $primary-color;
   }
 }
