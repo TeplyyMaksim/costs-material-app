@@ -1,13 +1,12 @@
 .app {
-  text-align: center;
-  font-family: 'Roboto', sans-serif;
-
-  .header {
-    height: 60px;
+  header {
+    text-align: center;
+    padding-top: 10px;
     padding-bottom: 20px;
     font-size: 45px;
-    border-top: 10px solid $primary-darker-color;
+    border-top: 10px solid;
     line-height: 60px;
-    background: $primary-color;
+    background: $container-background;
+    border-color: $container-border-color;
   }
 }
