@@ -1,12 +1,24 @@
 .app {
+  position: relative;
+  min-height: 100vh;
+  padding-bottom: 100px;
   header {
-    text-align: center;
-    padding-top: 10px;
+    @extend .closing-block;
     padding-bottom: 20px;
     font-size: 45px;
     border-top: 10px solid;
-    line-height: 60px;
-    background: $container-background;
-    border-color: $container-border-color;
+    span {
+      color: $yellow600;
+    }
+  }
+  footer {
+    @extend .closing-block;
+    position: absolute;
+    bottom: 0;
+    padding-top: 20px;
+    border-bottom: 10px solid;
+  }
+  .counts-list {
+    width: 100%;
   }
 }

@@ -1,5 +1,15 @@
 $green300: #81C784;
 $green800: #2E7D32;
+$yellow600: #FDD835;
 
 $container-background: $green300;
 $container-border-color: $green800;
+
+.closing-block {
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  line-height: 60px;
+  background: $container-background;
+  border-color: $container-border-color;
+}
